@@ -120,6 +120,10 @@ button {
         padding: 10px;
     }
 
+    .navbar {
+        margin-bottom: 12rem;
+    }
+
     h1 {
         margin-top: 12rem;
     }
