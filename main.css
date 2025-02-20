@@ -1,0 +1,145 @@
+
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@50,100,200,300,400,500,700,800&display=swap');
+
+* {
+    font-family: 'Satoshi', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.navbar {
+    background-color: black;
+    font-size: 24px;
+    font-weight: 400;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1em;
+    letter-spacing: 2.5px;
+}
+
+
+.container {
+    /* padding: 20px; */
+    position: relative;
+    z-index: 2;
+}
+
+
+h1 {
+    font-size: 80px;
+    font-weight: 800;
+    margin-bottom: 2px;
+}
+
+.container-paragraph {
+    max-width: 45rem;
+    font-size: 20px;
+    font-weight: 50;
+    line-height: 1.5;
+    padding-bottom: 55px;
+    letter-spacing: 0.72px;
+}
+
+p {
+    max-width: 45%;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.subscribe-container-wording {
+    max-width: 42.1rem;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.subscribe-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+input {
+    width: 20rem;
+    padding: 0.875rem 3.125rem;
+    border-radius: 30px;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    outline: none;
+    font-size: 16px;
+    text-align: left;
+    padding-left: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+button {
+    padding: 0.875rem 3.125rem;
+    border-radius: 30px;
+    border: none;
+    background-color: white;
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    z-index: 2;
+}
+
+.background {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0.05;
+}
+
+@media (max-width: 768px) {
+    * {
+        padding: 10px;
+    }
+
+    h1 {
+        padding-top: 100px;
+    }
+
+    .subscribe-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input {
+        width: 24rem;
+        padding: 14px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    button {
+        width: 26rem;
+        padding: 14px;
+        font-size: 16px;
+        justify-content: center;
+    }
+}

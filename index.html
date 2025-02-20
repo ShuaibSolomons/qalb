@@ -1,18 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <meta name="keywords" content="">
-        <meta name="author" content="Qalb">
-        <meta name="description" content="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QALB - Donate to any Mosque</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<header>
+</header>
+<body>
+    <div class="navbar">QALB</div>
+    <h1>Donate to any Mosque<br> in Cape Town</h1>
+    <p class="container-paragraph">Introducing Qalb — a digital payments solution that connects you to the Mosques you care about most. With Qalb, you can easily and securely donate to your Mosque of choice, no matter where you are.</p>
+    <p class="subscribe-container-wording">Subscribe below for early access before our launch!</p>
+    <div class="subscribe-container">
+        <input type="email" placeholder="Enter your email">
+        <button>Subscribe →</button>
+    </div>
+    <img src="Union.png" alt="Mosque Skyline" class="background">
+    <script>
+        function subscribe() {
+            const email = document.getElementById('email').value;
+            if (!email) {
+                alert('Please enter a valid email');
+                return;
+            }
 
-        <title>Qalb</title>
-        <link rel="stylesheet" href="css/main.css">
-    </head>
-    <body>
-        Welcome to Qalb
-    </body>
+            fetch('https://your-api-endpoint.com/subscribe', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email })
+            })
+            .then(response => response.json())
+            .then(data => alert('Subscription successful!'))
+            .catch(error => alert('Subscription failed. Please try again.'));
+        }
+    </script>
+</body>
 </html>
