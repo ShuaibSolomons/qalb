@@ -23,7 +23,7 @@ body {
 }
 
 nav {
-    height: 80px;
+    height: 10vh;
     font-size: 24px;
     font-weight: 400;
     letter-spacing: 2.5px;
@@ -171,7 +171,7 @@ button {
         justify-content: center;
     }
 }
-
+ 
 @media (max-width: 500px) {
 
     body {
@@ -182,6 +182,13 @@ button {
 @media (max-width: 400px) {
 
     body {
-        padding-top: 240px;
+        padding-top: 260px;
+    }
+}
+
+@media (max-width: 375px) {
+
+    body {
+        padding-top: 280px;
     }
 }
