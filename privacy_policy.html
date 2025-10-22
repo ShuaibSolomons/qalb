@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - QALB</title>
+    <link rel="stylesheet" href="privacy_policy.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+</head>
+<nav>
+    QALB
+</nav>
+<body>
+    
+    <div class="privacy-policy-container">
+        <div id="privacy-policy-content">
+            <!-- Markdown content will be loaded here -->
+        </div>
+    </div>
+
+    <script>
+        // Fetch and render the markdown file
+        fetch('privacy_policy.md')
+            .then(response => response.text())
+            .then(markdown => {
+                document.getElementById('privacy-policy-content').innerHTML = marked.parse(markdown);
+            })
+            .catch(error => {
+                console.error('Error loading terms:', error);
+                document.getElementById('privacy-policy-content').innerHTML = '<h1>Error loading terms</h1><p>Please try again later.</p>';
+            });
+    </script>
+</body>
+</html>
